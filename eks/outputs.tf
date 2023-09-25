@@ -29,7 +29,3 @@ output "oidc_id" {
 output "identity" {
   value = aws_eks_cluster.sta_cluster.identity[0].oidc[0].issuer
 }
-
-output "oidc_id" {
-  value = aws_iam_openid_connect_provider.default.id
-}
