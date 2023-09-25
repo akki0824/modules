@@ -1,4 +1,4 @@
-output "cluster_id" {
+/* output "cluster_id" {
   description = "EKS cluster ID."
   value       = aws_eks_cluster.sta_cluster.id
 }
@@ -17,7 +17,6 @@ output "cluster_name" {
   description = "Kubernetes Cluster Name"
   value       = aws_eks_cluster.sta_cluster.name
 }
-
 output "identity" {
   value = aws_eks_cluster.sta_cluster.identity[0].oidc[0].issuer
 }
@@ -25,4 +24,4 @@ output "identity" {
 output "oidc_id" {
   value = aws_iam_openid_connect_provider.default.id
   
-}
+} */
