@@ -1,3 +1,4 @@
+variable "region" {}
 variable "cluster_name" {}
 variable "cluster_version" {}
 variable "create_node_group" {}
@@ -9,3 +10,6 @@ variable "min_size" {}
 variable "ami_type" {}
 variable "capacity_type" {}
 variable "instance_types" {}
+
+variable "subnet_ids" {}
+  

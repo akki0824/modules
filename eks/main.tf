@@ -3,7 +3,7 @@ resource "aws_eks_cluster" "sta_cluster" {
   version  = var.cluster_version
   role_arn = aws_iam_role.eks_cluster_role.arn
   vpc_config {
-    subnet_ids = [module.vpc.subnet_ids[0], module.vpc.subnet_ids[1]]
+    subnet_ids =[ var.subnet_ids[0], module.vpc.subnet_ids[1]]
   }
 }
 
