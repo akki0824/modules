@@ -3,7 +3,7 @@ resource "aws_eks_cluster" "sta_cluster" {
   version  = var.cluster_version
   role_arn = aws_iam_role.eks_cluster_role.arn
   vpc_config {
-    subnet_ids =[var.subnet_ids[0], var.subnet_ids[1]]
+    subnet_ids =[var.subnet_ids]
   }
 }
 
@@ -12,7 +12,7 @@ resource "aws_eks_node_group" "worker-group" {
   cluster_name    = aws_eks_cluster.sta_cluster.name
   node_group_name = var.node_group_name
   node_role_arn   = aws_iam_role.worker-role.arn
-  subnet_ids      = [var.subnet_ids[2], var.subnet_ids[3]]
+  subnet_ids      = [var.subnet_ids]
   scaling_config {
     desired_size = var.desired_size
     max_size     = var.max_size
