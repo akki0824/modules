@@ -11,4 +11,5 @@ variable "ami_type" {}
 variable "capacity_type" {}
 variable "instance_types" {}
 variable "subnet_ids" {}
-  
+variable "role_arn" {} 
+variable "node_role_arn" {}
