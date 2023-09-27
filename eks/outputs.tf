@@ -32,5 +32,5 @@ output "identity" {
 
 output "cluster_details" {
   description = "Kubernetes Cluster Name"
-  value       = aws_eks_cluster.sta_cluster
+  value       = aws_eks_cluster.sta_cluster.id
 }
