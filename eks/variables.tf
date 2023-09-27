@@ -13,3 +13,6 @@ variable "instance_types" {}
 variable "subnet_ids" {}
 variable "role_arn" {} 
 variable "node_role_arn" {}
+variable "node_group_subnet_id" {
+  
+}
