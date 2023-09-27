@@ -24,7 +24,7 @@ resource "aws_eks_node_group" "worker-group" {
   }
   ami_type       = var.ami_type
   capacity_type  = var.capacity_type
-  instance_types = [var.instance_types]
+  instance_types = var.instance_types
   depends_on = [
     aws_iam_role_policy_attachment.example-AmazonEKSWorkerNodePolicy,
     aws_iam_role_policy_attachment.example-AmazonEKS_CNI_Policy,
